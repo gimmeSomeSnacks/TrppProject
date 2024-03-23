@@ -1,10 +1,7 @@
 package ru.tuganov.trrp_project.entities;
 
 
-import jakarta.persistence.ElementCollection;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -16,10 +13,12 @@ import java.util.Map;
 @Setter
 public class Order {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     @ElementCollection
     private Map<Integer, Integer> toys;
     private String state;
-    private long userId;
     private int totalCost;
+    @ManyToOne
+    private User user;
 }

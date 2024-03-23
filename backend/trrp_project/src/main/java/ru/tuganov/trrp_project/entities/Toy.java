@@ -10,6 +10,7 @@ import lombok.Setter;
 @Setter
 public class Toy {
     @Id
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private int id;
     private String name;
     private int toyPrice;

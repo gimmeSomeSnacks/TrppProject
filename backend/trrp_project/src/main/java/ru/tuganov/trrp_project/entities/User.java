@@ -1,9 +1,8 @@
 package ru.tuganov.trrp_project.entities;
 
 
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.Table;
+import com.fasterxml.jackson.annotation.JsonIgnore;
+import jakarta.persistence.*;
 import lombok.Getter;
 import lombok.Setter;
 
@@ -13,7 +12,9 @@ import lombok.Setter;
 @Setter
 public class User {
     @Id
-    private int id;
+    @GeneratedValue(strategy = GenerationType.AUTO)
+    private long id;
     private String login;
+    @JsonIgnore
     private String password;
 }
