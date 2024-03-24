@@ -17,7 +17,7 @@ public class OrderService {
     private OrderRepository orderRepository;
 
     public Iterable<Order> getOrdersByUserId(long userId) {
-        return orderRepository.findAllByUserId(userId);
+        return orderRepository.findAllByCustomUserId(userId);
     }
 
     public ResponseEntity<String> saveOrder(Order order) {

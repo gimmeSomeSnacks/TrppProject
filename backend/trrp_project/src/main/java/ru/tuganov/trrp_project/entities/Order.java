@@ -19,6 +19,5 @@ public class Order {
     private Map<Integer, Integer> toys;
     private String state;
     private int totalCost;
-    @ManyToOne
-    private User user;
+    private long customUserId;
 }
