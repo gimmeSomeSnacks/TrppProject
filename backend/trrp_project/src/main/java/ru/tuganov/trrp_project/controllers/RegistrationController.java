@@ -22,12 +22,19 @@ import java.util.List;
 @Controller
 @AllArgsConstructor
 @Slf4j
+
+// Добавить это
+@RequestMapping("/register")
+
+// Название поменяй на EntryController
 public class RegistrationController {
 
     private UserDetailsManager userDetailsManager;
     private PasswordEncoder passwordEncoder;
 
-    @GetMapping("/register")
+    @GetMapping("/register") // Это поменять на 
+    @GetMapping // Это
+
     public String showRegistrationForm(Model model) {
         model.addAttribute("customUser", new CustomUser());
         return "registration-form";
@@ -42,7 +49,9 @@ public class RegistrationController {
 //        userDetailsManager.createUser(new User(user.getName(), encodedPassword, List.of(new SimpleGrantedAuthority("SIMPLE_USER"))));
 //        return "redirect:/login";
 //    }
-    @PostMapping("/register")
+    @PostMapping("/register") // Это поменять на 
+    @PostMapping // Это
+    
     public String registerUser(@ModelAttribute("customUser") CustomUser user) {
 //        if (userDetailsManager.userExists(user.getName())) {
 //            log.info("User with username {} already exists.", user.getName());
