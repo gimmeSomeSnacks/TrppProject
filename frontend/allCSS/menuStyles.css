@@ -10,7 +10,7 @@ header *{
 .menu {
     display: grid;
     justify-items: stretch;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     border-bottom-left-radius: 20px;
     border-bottom-right-radius: 20px;
     background: linear-gradient(to bottom right,#ff7b00, #ff2ca0);
