@@ -9,16 +9,16 @@
   <link href="https://myfonts.ru/myfonts?fonts=bonjour-mon-ami-rus" rel="stylesheet" type="text/css" />
   <link href="../allCSS/katalogStyles.css" rel="stylesheet">
   <link href="../allCSS/menuStyles.css" rel="stylesheet">
-
 </head>
 
 <body>
   <header>
     <nav class = "menu">
-      <img src = "/kursach/resources/logo.png" alt = "logo" align = "left" height = "82px" width = "300px">
+      <img src = "../resources/logo.png" alt = "logo" align = "left" height = "82px" width = "300px">
       <a href="main.html"><div class = "menuBox"><p>Главная страница</p></div></a>
-      <a href="katalog.html"><div class = "menuBox" style = " background-color: #ff8888;"><p style="color: black;">Каталог</p></div></a>
-      <a href="moreInf.html"><div class = "menuBox" id = "last"><p>Частые вопросы</p></div></a>
+      <a href="katalog.html"><div class = "menuBox"><p>Каталог</p></div></a>
+      <a href="moreInf.html"><div class = "menuBox"><p>Частые вопросы</p></div></a>
+      <a href="userPage.html"><div class = "menuBox" id="last"><p>Личный<br>кабинет</p></div></a>
     </nav>
     <nav class="hamburger-menu">
       <input id="menu__toggle" type="checkbox" />
@@ -29,11 +29,12 @@
         <li><a class="menu__item" href="main.html">Главная страница</a></li>
         <li><a class="menu__item" href="katalog.html">Каталог</a></li>
         <li><a class="menu__item" href="moreInf.html">О нас</a></li>
+        <li><a class="menu__item" href="userPage.html">Личный кабинет</a></li>
       </ul>
     </nav>
     <div class="hamburgerGoods">
       <input id="toggleGoods" type="checkbox" onclick="fillCartItems()" />
-      <label class="btnGoods" for="toggleGoods">
+      <label class="btnGoods" for="toggleGoods" style="cursor: pointer;">
         <img src="../resources/korsina.png">
       </label>
       <div class="fullBackground"> </div>
@@ -43,7 +44,8 @@
       </div>
     </div>
   </header>
-  <script src = "/kursach/allJS/burger-order-manager.js"></script>
+
+  <script src = "../allJS/burger-order-manager.js"></script>
   <main class = "section">
     <div class = "container">
       <div class = "catalogFlex">
@@ -318,7 +320,8 @@
       </div>
     </div>
   </main>
-  <script src = "/kursach/allJS/sticky-script.js"></script>
+  <script src = "../allJS/sticky-script.js"></script>
+
   <footer class="end">
     <div class="fastTravel">
       <h2>Быстрая навигация</h2>
@@ -341,8 +344,8 @@
       <a href="tel:89175423367">+7 (917) 542-33-67</a>
       <p style="color: white;">Наша почта:</p>
       <a href="mailto:n-tuganov@gmail.com">n-tuganov@gmail.com</a>
-      <p>Менеджер: </p>
-      <p>Туганов Н.А. ИКБО-20-22</p>
+      <p>Компания: </p>
+      <p>ИКБО-20-22</p>
   </div>
   <div class = "socialMedia">
       <h2>Мы в социальных сетях</h2>
