@@ -22,6 +22,7 @@ public class OrderService {
 
     public ResponseEntity<String> saveOrder(Order order) {
         orderRepository.save(order);
+        // Просто ok()
         return ResponseEntity.ok("Order added!");
     }
 }
