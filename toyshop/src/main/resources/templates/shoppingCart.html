@@ -36,10 +36,10 @@
             <label><input required type = "radio" name = "payment" th:field="*{paymentChoose}" th:value="наличные">Оплата наличными</label>
         </div>
         <div th:each = "toy, i: *{orderItems}">
-            <input th:id = "${'index' + __${i.index}__}" th:field="*{orderItems[__${i.index}__].getToy.id}" style="display: none;">
-            <input th:id = "${'name' + __${i.index}__}" th:field="*{orderItems[__${i.index}__].getToy.name}" style="display:none;">
+            <input th:id = "${'index' + __${i.index}__}" th:field="*{orderItems[__${i.index}__].toy.id}" style="display: none;">
+            <input th:id = "${'name' + __${i.index}__}" th:field="*{orderItems[__${i.index}__].toy.name}" style="display:none;">
             <input th:id = "${'amount' + __${i.index}__}" th:field="*{orderItems[__${i.index}__].amount}" style="display: none;">
-            <input th:id = "${'toyPrice' + __${i.index}__}" th:field="*{orderItems[__${i.index}__].getToy.toyPrice}" style="display: none;">
+            <input th:id = "${'toyPrice' + __${i.index}__}" th:field="*{orderItems[__${i.index}__].toy.toyPrice}" style="display: none;">
         </div>
         <button type="submit" class = "shineButton" onclick = "removeAll()">Оформить</button>
     </form>
