@@ -6,4 +6,4 @@ COPY . /app
 
 EXPOSE 8080
 
-ENTRYPOINT [ "java","-jar","/app/build/libs/toyshop-0.0.1-SNAPSHOT.jar" ]
+ENTRYPOINT [ "java","-jar","/app/build/libs/bookshop-0.0.1-SNAPSHOT.jar" ]
