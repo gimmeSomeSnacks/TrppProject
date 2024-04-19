@@ -5,10 +5,8 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
-import ru.tuganov.entities.Order;
 import ru.tuganov.entities.User;
 import ru.tuganov.services.OrderService;
-import ru.tuganov.services.BookService;
 import ru.tuganov.services.UserService;
 
 @Controller

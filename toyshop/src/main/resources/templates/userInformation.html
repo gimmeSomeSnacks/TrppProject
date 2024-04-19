@@ -23,9 +23,9 @@
                 </div>
                 <div th:each="prod : ${order.getOrderItems()}">
                     <div class = "product">
-                        <img th:src="@{'/static/images/' + ${prod.getBook().getId()} + '.jpg'}">
-                        <p th:text = "${prod.getBook().getName()}"></p>
-                        <p th:text = "${'Цена: ' + prod.getBook().getBookPrice()  + ' ₽'}"></p>
+                        <img th:src="@{'/static/images/' + ${prod.getToy().getId()} + '.jpg'}">
+                        <p th:text = "${prod.getToy().getName()}"></p>
+                        <p th:text = "${'Цена: ' + prod.getToy().getBookPrice()  + ' ₽'}"></p>
                         <p th:text = "${'Количество: ' + prod.getAmount()}"></p>
                     </div>
                 </div>

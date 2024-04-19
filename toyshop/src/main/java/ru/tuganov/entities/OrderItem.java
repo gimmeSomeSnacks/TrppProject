@@ -13,8 +13,8 @@ public class OrderItem {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
     @ManyToOne
-    @JoinColumn(name = "book_id")
-    private Book book;
+    @JoinColumn(name = "toy_id")
+    private Toy toy;
     private int amount;
     @ManyToOne
     private Order order;

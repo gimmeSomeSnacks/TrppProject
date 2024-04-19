@@ -42,7 +42,7 @@ public class UserService {
         Iterable<User> allUsers = userRepository.findAll();
         List<User> users = new ArrayList<>();
         for (User user : allUsers) {
-            if (!user.getRoles().getFirst().getRole().equals("ROLE_ADMIN")) {
+            if (!user.getRoles().get(0).getRole().equals("ROLE_ADMIN")) {
                 users.add(user);
             }
         }

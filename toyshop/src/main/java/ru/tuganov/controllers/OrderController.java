@@ -8,7 +8,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 import ru.tuganov.entities.*;
 import ru.tuganov.security.CustomUserDetails;
-import ru.tuganov.services.BookService;
+import ru.tuganov.services.ToyService;
 import ru.tuganov.services.OrderService;
 import ru.tuganov.services.UserService;
 
@@ -23,13 +23,13 @@ public class OrderController {
     @Autowired
     private OrderService orderService;
     @Autowired
-    private BookService bookService;
+    private ToyService toyService;
     @Autowired
     private UserService userService;
 
-    public OrderController(OrderService orderService, BookService bookService) {
+    public OrderController(OrderService orderService, ToyService toyService) {
         this.orderService = orderService;
-        this.bookService = bookService;
+        this.toyService = toyService;
     }
     private NumberOfItems numberOfItems = new NumberOfItems(1);
 
@@ -47,7 +47,7 @@ public class OrderController {
         order.setOrderItems(orderItems);
         for (int i = 0; i < numberOfItems.getNumber(); i++) {
             OrderItem orderItem = new OrderItem();
-            orderItem.setBook(new Book());
+            orderItem.setToy(new Toy());
             order.addOrderItem(orderItem);
         }
         model.addAttribute("numberOfItems", numberOfItems);
@@ -78,7 +78,7 @@ public class OrderController {
     @GetMapping("/catalog")
     public String getCatalog(Model model) {
         model.addAttribute("numberOfItems", numberOfItems);
-        model.addAttribute("bookList", bookService.findAll());
+        model.addAttribute("toyList", toyService.findAll());
         return "catalog";
     }
 

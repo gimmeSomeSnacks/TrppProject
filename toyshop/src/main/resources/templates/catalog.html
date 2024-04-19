@@ -15,7 +15,7 @@
     <div class = "container">
         <div class = "catalogFlex">
             <div class="catalog">
-                <div class="product" th:each="prod : ${bookList}">
+                <div class="product" th:each="prod : ${toyList}">
                     <img th:src="@{'/static/images/' + ${prod.getId()} + '.jpg'}" th:id = "'img' + ${prod.getId()}">
                     <div class="caption">
                         <p class="title" th:id = "'title' + ${prod.getId()}" th:text = "${prod.getName()}"></p>
