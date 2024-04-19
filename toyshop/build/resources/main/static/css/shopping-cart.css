@@ -1,0 +1,189 @@
+main{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 100px;
+    margin-right: 50px;
+}
+
+main p{
+    color: black;
+    text-shadow: none;
+}
+
+.cart{
+    position: relative;
+    left: 50px;
+    width: 1000px;
+}
+
+.contactsMenu{
+    border-radius: 20px;
+    backdrop-filter: opacity(80%);
+    width: 25%;
+    max-height: 700px;
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+    background: #EF8888;
+}
+
+.contactsMenu h2{
+    margin-left: 10px;
+}
+
+.contactsMenu input{
+    width: 50px;
+    border: none;
+    background-color: transparent;
+    color: inherit;
+    outline: none;
+    font-size: 20px;
+}
+
+.contactsMenu p{
+    width: 30px;
+    font-size: 22px;
+}
+
+#text2{
+    font-style: italic;
+}
+
+.textInput input{
+    border-radius: 20px;
+    margin: 10px;
+    padding: 5px;
+    background: #EFB19C;
+    border: rgb(128, 128, 128);
+    height: 30px;
+    width: 340px;
+}
+
+.paymentChoose{
+    display: flex;
+    flex-direction: column;
+}
+
+.paymentChoose label{
+    margin: 10px;
+    font-size: 20px;
+}
+
+.topBar{
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 0.7fr 0.7fr 0.7fr;
+    width: 100%;
+    text-align: center;
+    margin-bottom: 50px;
+    border-bottom: solid 2px rgb(128, 128, 128);
+}
+
+.topBar div{
+    border-left: solid 2px rgb(128, 128, 128);
+    border-top: solid 2px rgb(128, 128, 128);
+    padding: 10px;
+}
+
+.topBar div:last-child{
+    border-right: solid 2px rgb(128, 128, 128);
+}
+
+.topBar p{
+    font-size: 20px;
+    margin: 0;
+}
+
+.topBar div:first-child{
+    border-radius: 20px 0 0 0;
+}
+
+.topBar div:last-child{
+    border-radius: 0 20px 0 0;
+}
+
+.oneGood{
+    margin-bottom: 50px;
+    display: grid;
+    grid-template-columns: 1fr 0.7fr 0.7fr 0.7fr;
+    align-items: center;
+    justify-items: center;
+    border-bottom: solid 2px rgb(128, 128, 128);
+}
+
+.card{
+    color: black;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    font-weight: 550;
+    text-decoration: none;
+    justify-items: center;
+    align-items: center;
+}
+
+.card img{
+    width: 150px;
+    height: 150px;
+    border-radius: 20px;
+}
+
+.card a{
+    color: black;
+    text-decoration: none;
+}
+
+.remove-btn:nth-child(2):hover{
+    color:red;
+    border: 2px solid red;
+    background-color: white;
+}
+
+
+.remove-btn{
+    background: #F07B91;
+    border: 2px solid #F02C6E;
+    margin-left: 10px;
+    padding: 0;
+    width: 25px;
+    height: 25px;
+    font-size: 15px;
+    text-align: center;
+}
+
+
+.shineButton {
+    text-decoration: none;
+    padding: 10px 30px;
+    position: relative;
+    left: 50%;
+    transform: translate(-50%);
+    overflow: hidden;
+    border: 2px solid #F02C6E;
+    border-radius: 8px;
+    font-size: 25px;
+    color: #F02C6E;
+    transition: .2s ease-in-out;
+}
+
+.shineButton:before {
+    content: "";
+    background: linear-gradient(90deg, rgba(255, 255, 255, .1), rgba(255, 255, 255, .5));
+    height: 100%;
+    width: 100%;
+    position: absolute;
+    top: -1%;
+    left: -100%;
+    transform: skewX(-45deg);
+}
+
+.shineButton:hover {
+    background: #F07B91;
+    color: #fff;
+}
+
+.shineButton:hover:before {
+    left: 150px;
+    transition: .5s ease-in-out;
+}
