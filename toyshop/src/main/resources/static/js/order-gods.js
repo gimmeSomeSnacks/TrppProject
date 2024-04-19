@@ -63,7 +63,7 @@ function fillCartItems() {
         cartName.value = cart[ind].name;
         let cartAmount = document.getElementById('amount' + ind);
         cartAmount.value = parseInt(cart[ind].amount);
-        let cartBookPrice = document.getElementById('bookPrice' + ind);
+        let cartBookPrice = document.getElementById('toyPrice' + ind);
         cartBookPrice.value = parseInt(cart[ind].price);
         summ += cart[ind].amount * cart[ind].price;
         cartItemsElement.appendChild(cartItemElement);

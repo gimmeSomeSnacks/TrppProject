@@ -25,7 +25,7 @@
                     <div class = "product">
                         <img th:src="@{'/static/images/' + ${prod.getToy().getId()} + '.jpg'}">
                         <p th:text = "${prod.getToy().getName()}"></p>
-                        <p th:text = "${'Цена: ' + prod.getToy().getBookPrice()  + ' ₽'}"></p>
+                        <p th:text = "${'Цена: ' + prod.getToy().getToyPrice()  + ' ₽'}"></p>
                         <p th:text = "${'Количество: ' + prod.getAmount()}"></p>
                     </div>
                 </div>
